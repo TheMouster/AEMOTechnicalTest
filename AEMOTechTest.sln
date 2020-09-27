@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AEMOTechTest.Extensions", "AEMOTechTest.Extensions\AEMOTechTest.Extensions.csproj", "{EE329F65-D55D-4F42-B65D-E96EDC8729B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEMOTechTest.Tests", "AEMOTechTest.Tests\AEMOTechTest.Tests.csproj", "{B053FB9D-FC4E-4B66-82B4-FFE133CF227A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE329F65-D55D-4F42-B65D-E96EDC8729B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE329F65-D55D-4F42-B65D-E96EDC8729B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE329F65-D55D-4F42-B65D-E96EDC8729B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE329F65-D55D-4F42-B65D-E96EDC8729B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B053FB9D-FC4E-4B66-82B4-FFE133CF227A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B053FB9D-FC4E-4B66-82B4-FFE133CF227A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B053FB9D-FC4E-4B66-82B4-FFE133CF227A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B053FB9D-FC4E-4B66-82B4-FFE133CF227A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3130AD3E-D573-4F9C-AA54-0C712A3E6EFA}
+	EndGlobalSection
+EndGlobal
