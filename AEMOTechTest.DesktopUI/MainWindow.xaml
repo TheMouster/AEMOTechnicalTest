@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="AEMO Technical Test" MinHeight="300" MinWidth="450" Height="300" Width="450">
     <Grid>
-        <Label Content="Text:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Padding="0" Height="15"/>
+        <Label Content="_Text" Target="{Binding ElementName=txtText}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Padding="0" Height="15"/>
         <TextBox Name="txtText" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,30,10,125" Padding="2" Text="" TextWrapping="Wrap" AcceptsReturn="True" TextAlignment="Left"/>
 
-        <Label Content="Subtext:" HorizontalAlignment="Left" Margin="10,0,0,100" VerticalAlignment="Bottom" Padding="0" Height="15"/>
+        <Label Content="Su_btext" Target="{Binding ElementName=txtSubtext}" HorizontalAlignment="Left" Margin="10,0,0,100" VerticalAlignment="Bottom" Padding="0" Height="15"/>
         <TextBox Name="txtSubtext" Padding="5" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0,120,65" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="30" TextAlignment="Left"/>
-        <Button Name="btnSearch" Content="Search" HorizontalAlignment="Right" Margin="0,0,10,65" VerticalAlignment="Bottom" Height="50" Width="100"/>
+        <Button Name="btnSearch" Click="btnSearch_Click" Content="_Search" HorizontalAlignment="Right" Margin="0,0,10,65" VerticalAlignment="Bottom" Height="50" Width="100"/>
 
-        <Label Content="Positions:" HorizontalAlignment="Left" Margin="10,0,0,45" VerticalAlignment="Bottom" Padding="0" Height="15"/>
-        <TextBox Name="txtResults" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" Margin="10,220,10,10" Text="1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0," TextWrapping="Wrap" VerticalAlignment="Bottom" Height="30"/>
+        <Label Content="_Positions" Target="{Binding ElementName=txtResults}" HorizontalAlignment="Left" Margin="10,0,0,45" VerticalAlignment="Bottom" Padding="0" Height="15"/>
+        <TextBox Name="txtResults" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" Margin="10,220,10,10" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="30"/>
     </Grid>
 </Window>

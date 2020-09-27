@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AEMOTechTest.Extensions;
 
 namespace AEMOTechTest.DesktopUI
 {
@@ -23,6 +24,16 @@ namespace AEMOTechTest.DesktopUI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            var text = txtText.Text;
+            var subtext = txtSubtext.Text;
+
+            var results = text.indexesOf(subtext);
+
+            txtResults.Text = results.Count() == 0 ? "Not found" : string.Join(", ", results);
         }
     }
 }
