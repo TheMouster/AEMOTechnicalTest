@@ -31,7 +31,7 @@ namespace AEMOTechTest.Tests
 
             var expectedPositions = corpus.indexesOf(term);
 
-            Assert.AreEqual(expectedPositions.Count, 0);
+            CollectionAssert.AreEqual(expectedPositions.ToList(), new List<int>());
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace AEMOTechTest.Tests
 
             var expectedPositions = corpus.indexesOf(term);
 
-            Assert.AreEqual(expectedPositions.Count, 0);
+            CollectionAssert.AreEqual(expectedPositions.ToList(), new List<int>());
 
         }
 
@@ -52,7 +52,9 @@ namespace AEMOTechTest.Tests
             var corpus = "Tama and James Cook";
             var term = "Tama and James Cook were up to no good.";
 
+            var expectedPositions = corpus.indexesOf(term);
 
+            CollectionAssert.AreEqual(expectedPositions.ToList(), new List<int>());
         }
 
         [TestMethod]
@@ -62,19 +64,32 @@ namespace AEMOTechTest.Tests
             var term = "snarky";
 
             var expectedPositions = corpus.indexesOf(term);
-
+            
             Assert.AreEqual(expectedPositions.Count, 1);
         }
 
         [TestMethod]
-        public void CorpusContains3Terms()
+        public void CorpusContains2Terms()
         {
-            var corpus = string.Empty;
-            var term = string.Empty;
+            var corpus = baconIpsum;
+            var term = "bacon";
 
             var expectedPositions = corpus.indexesOf(term);
 
-            Assert.AreEqual(expectedPositions.Count, 3);
+            Assert.AreEqual(expectedPositions.Count, 2);
+        }
+
+        [TestMethod]
+        public void CorpusContainsRepeatedTerms()
+        {
+            //Checks that repeated terms do not get missed by jumping too far after a match is found.
+            
+            var corpus = "Tama and JamesjamesJaMesjAmEs were up to no good.";
+            var term = "James";
+
+            var expectedPositions = corpus.indexesOf(term);
+
+            Assert.AreEqual(expectedPositions.Count(), 4);
         }
 
         [TestMethod]
@@ -96,7 +111,7 @@ namespace AEMOTechTest.Tests
 
             var expectedPositions = corpus.indexesOf(term);
 
-            Assert.AreEqual(expectedPositions.First(), (corpus.Length - term.Length) - 1);
+            Assert.AreEqual(expectedPositions.First(), (corpus.Length - term.Length));
         }
 
         [TestMethod]
@@ -113,10 +128,12 @@ namespace AEMOTechTest.Tests
         [TestMethod]
         public void MatchesAreCaseInsensitive()
         {
-            var corpus = string.Empty;
-            var term = string.Empty;
+            var corpus = "Tama and James james JaMes jAmEs were up to no good.";
+            var term = "James";
 
             var expectedPositions = corpus.indexesOf(term);
+
+            Assert.AreEqual(expectedPositions.Count(), 4);
         }
     }
 }
